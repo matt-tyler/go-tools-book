@@ -1,0 +1,43 @@
+{
+    "language": "de-DE",
+    "messages": [
+        {
+            "id": "It's {Minute} minute(s) past {Hour__12}",
+            "message": "It's {Minute} minute(s) past {Hour__12}",
+            "translation": {
+                "select": {
+                    "feature": "plural",
+                    "arg": "Minute",
+                    "cases": {
+                        "=1": {
+                            "msg": "Es ist {Minute} Minute nach {Hour__12}"
+                        },
+                        "other": {
+                            "msg": "Es ist {Minute} Minuten nach {Hour__12}"
+                        }
+                    }
+                }
+            },
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Minute",
+                    "string": "%[1]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 1,
+                    "expr": "t.Minute()"
+                },
+                {
+                    "id": "Hour__12",
+                    "string": "%[2]d",
+                    "type": "int",
+                    "underlyingType": "int",
+                    "argNum": 2,
+                    "expr": "t.Hour() % 12"
+                }
+            ],
+            "fuzzy": true
+        }
+    ]
+}
